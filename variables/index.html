@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #282a36;
+      font-family: monospace;
+    }
+
+    div {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+    }
+
+    p {
+      color: #f8f8f2;
+      font-size: 32px;
+    }
+
+    p:first-child {
+      margin-bottom: 32px;
+    }
+
+    p span {
+      color: #50fa7b;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <p>"Olá <span id="name"></span> você tem <span id="age"></span> anos e já está aprendendo <span
+        id="language"></span>!"</p>
+    <p id="final-question"></p>
+  </div>
+</body>
+
+<script src="app.js"></script>
+
+</html>
