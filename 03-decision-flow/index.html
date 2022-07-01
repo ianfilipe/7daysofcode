@@ -9,7 +9,47 @@
 </head>
 
 <body>
+  <h1>devJourney</h1>
+  <h2>O que você quer ser?</h2>
+  <button onclick="frontEnd()">Front-End</button>
+  <button onclick="backEnd()">Back-End</button>
 
+  <div id="front-end">
+    <p>Massa! Você quer ser Front-End.</p>
+    <p>E o que você quer aprender agora?</p>
+    <button onclick="frontOrBack()">React</button>
+    <button onclick="frontOrBack()">Vue</button>
+  </div>
+  <div id="back-end">
+    <p>Daora! Você quer ser Back-End.</p>
+    <p>E o que você quer aprender agora?</p>
+    <button onclick="frontOrBack()">C#</button>
+    <button onclick="frontOrBack()">Java</button>
+  </div>
+  <div id="is-front">
+    <p>Você quer se especializar em Front-End ou seguir se desenvolvendo para se tornar Fullstack?</p>
+    <button onclick="specialize()">Me especializar</button>
+    <button onclick="fullstack()">Fullstack</button>
+  </div>
+  <div id="is-back">
+    <p>Você quer se especializar em Back-End ou seguir se desenvolvendo para se tornar Fullstack?</p>
+    <button onclick="specialize()">Me especializar</button>
+    <button onclick="fullstack()">Fullstack</button>
+  </div>
+  <div id="specialize">
+    <p>Massa! Então bora estudar.</p>
+    <p>Quais são as tecnologias que você gostaria de se especializar ou conhecer? Digite uma de cada vez.</p>
+    <input type="text" id="langs" name="langs" value="">
+    <button onclick="printLangs()">Ok</button>
+    <div id="langs-result"></div>
+  </div>
+  <div id="fullstack">
+    <p>Massa! Então bora estudar.</p>
+    <p>Quais são as tecnologias que você gostaria de se especializar ou conhecer? Digite uma de cada vez.</p>
+    <input type="text" id="langs-two" name="langs-two" value="">
+    <button onclick="printLangsTwo()">Ok</button>
+    <div id="langs-result-two"></div>
+  </div>
 </body>
 
 <script src="app.js"></script>
