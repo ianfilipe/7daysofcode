@@ -7,9 +7,14 @@ var foodList = [
 
 let shopListResponse = ''
 
+let fruitList = foodList[0]
+let dairyList = foodList[1]
+let frozenList = foodList[2]
+let candyList = foodList[3]
+
 function shopList() {
   for (let i = 0; i >= 0; i++) {
-    if (foodList[0].indexOf(foodList[0][1]) != -1 || foodList[1].indexOf(foodList[1][1]) == true || foodList[2].indexOf(foodList[2][1]) == true || foodList[3].indexOf(foodList[3][1]) == true) {
+    if (fruitList.indexOf(fruitList[1]) != -1 || dairyList.indexOf(dairyList[1]) == true || frozenList.indexOf(frozenList[1]) == true || candyList.indexOf(candyList[1]) == true) {
       shopListResponse = prompt('Você deseja adicionar uma comida na sua lista de compras? Digite "1" para "sim" e "2" para "não". Digite "3" se quiser remover algum item da lista.')
     } else {
       shopListResponse = prompt('Você deseja adicionar uma comida na sua lista de compras? Digite "1" para "sim" e "2" para "não".')
@@ -18,40 +23,31 @@ function shopList() {
       let foodListResponse = prompt('Qual comida você deseja inserir?')
       let foodListCategory = prompt('Em qual categoria essa comida se encaixa? Digite "1" para "Frutas", "2" para  "Laticínios", "3" para "Congelados" e "4" para "Doces".')
       if (foodListCategory == 1) {
-        foodList[0].push(foodListResponse)
+        fruitList.push(foodListResponse)
       } else if (foodListCategory == 2) {
-        foodList[1].push(foodListResponse)
+        dairyList.push(foodListResponse)
       } else if (foodListCategory == 3) {
-        foodList[2].push(foodListResponse)
+        frozenList.push(foodListResponse)
       } else if (foodListCategory == 4) {
-        foodList[3].push(foodListResponse)
+        candyList.push(foodListResponse)
       }
     } else if (shopListResponse == 2) {
-      alert(`Essa é sua lista de compras:\n${foodList[0]}\n${foodList[1]}\n${foodList[2]}\n${foodList[3]}`)
-      // document.getElementById('food-list').innerHTML = `<p>${foodList[0]}</p> <p>${foodList[1]}</p> <p>${foodList[2]}</p> <p>${foodList[3]}</p>`
+      alert(`Essa é sua lista de compras:\n${fruitList}\n${dairyList}\n${frozenList}\n${candyList}`)
+      // document.getElementById('food-list').innerHTML = `<p>${fruitList}</p> <p>${dairyList}</p> <p>${frozenList}</p> <p>${candyList}</p>`
       break
     } else if (shopListResponse == 3) {
-      let deleteResponse = prompt(`Qual item você deseja remover?\n${foodList[0]}\n${foodList[1]}\n${foodList[2]}\n${foodList[3]}`)
-      if (foodList[0].indexOf(deleteResponse) != -1) {
-        foodList[0].splice(foodList[0].indexOf(deleteResponse))
-      } else if (foodList[1].indexOf(deleteResponse) != -1) {
-        foodList[1].splice(foodList[1].indexOf(deleteResponse))
-      } else if (foodList[2].indexOf(deleteResponse) != -1) {
-        foodList[2].splice(foodList[2].indexOf(deleteResponse))
-      } else if (foodList[3].indexOf(deleteResponse) != -1) {
-        foodList[3].splice(foodList[3].indexOf(deleteResponse))
+      let deleteResponse = prompt(`Qual item você deseja remover?\n${fruitList}\n${dairyList}\n${frozenList}\n${candyList}`)
+      if (fruitList.indexOf(deleteResponse) != -1) {
+        fruitList.splice(fruitList.indexOf(deleteResponse))
+      } else if (dairyList.indexOf(deleteResponse) != -1) {
+        dairyList.splice(dairyList.indexOf(deleteResponse))
+      } else if (frozenList.indexOf(deleteResponse) != -1) {
+        frozenList.splice(frozenList.indexOf(deleteResponse))
+      } else if (candyList.indexOf(deleteResponse) != -1) {
+        candyList.splice(candyList.indexOf(deleteResponse))
       } else {
         alert('Não foi possível encontrar o item dentro da lista!')
       }
     }
   }
 }
-
-// var arr = [
-//   ['Frutas: ', 'Maçã'],
-//   ['Laticínios: '],
-//   ['Congelados:'],
-//   ['Doces: ']
-// ]
-
-// console.log(arr[0].includes('Maçã'))
