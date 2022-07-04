@@ -38,13 +38,13 @@ function shopList() {
     } else if (shopListResponse == 3) {
       let deleteResponse = prompt(`Qual item você deseja remover?\n${fruitList}\n${dairyList}\n${frozenList}\n${candyList}`)
       if (fruitList.indexOf(deleteResponse) != -1) {
-        fruitList.splice(fruitList.indexOf(deleteResponse))
+        fruitList.splice(fruitList.indexOf(deleteResponse), 1)
       } else if (dairyList.indexOf(deleteResponse) != -1) {
-        dairyList.splice(dairyList.indexOf(deleteResponse))
+        dairyList.splice(dairyList.indexOf(deleteResponse), 1)
       } else if (frozenList.indexOf(deleteResponse) != -1) {
-        frozenList.splice(frozenList.indexOf(deleteResponse))
+        frozenList.splice(frozenList.indexOf(deleteResponse), 1)
       } else if (candyList.indexOf(deleteResponse) != -1) {
-        candyList.splice(candyList.indexOf(deleteResponse))
+        candyList.splice(candyList.indexOf(deleteResponse), 1)
       } else {
         alert('Não foi possível encontrar o item dentro da lista!')
       }
